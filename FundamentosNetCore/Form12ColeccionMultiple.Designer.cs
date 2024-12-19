@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new Label();
-            lblItemSeleccionado = new Label();
+            lblIndexSeleccionados = new Label();
+            lblItemsSeleccionados = new Label();
             btnEliminar = new Button();
             btnBorrarTodo = new Button();
             btnInsertar = new Button();
@@ -37,34 +37,37 @@
             label2 = new Label();
             label1 = new Label();
             lstElementos = new ListBox();
+            btnSeleccionados = new Button();
             SuspendLayout();
             // 
-            // label4
+            // lblIndexSeleccionados
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 414);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 8;
-            label4.Text = "label4";
+            lblIndexSeleccionados.AutoSize = true;
+            lblIndexSeleccionados.Location = new Point(12, 414);
+            lblIndexSeleccionados.Name = "lblIndexSeleccionados";
+            lblIndexSeleccionados.Size = new Size(111, 15);
+            lblIndexSeleccionados.TabIndex = 8;
+            lblIndexSeleccionados.Text = "IndexSeleccionados";
             // 
-            // lblItemSeleccionado
+            // lblItemsSeleccionados
             // 
-            lblItemSeleccionado.AutoSize = true;
-            lblItemSeleccionado.Location = new Point(12, 380);
-            lblItemSeleccionado.Name = "lblItemSeleccionado";
-            lblItemSeleccionado.Size = new Size(38, 15);
-            lblItemSeleccionado.TabIndex = 16;
-            lblItemSeleccionado.Text = "label3";
+            lblItemsSeleccionados.AutoSize = true;
+            lblItemsSeleccionados.Location = new Point(12, 380);
+            lblItemsSeleccionados.Name = "lblItemsSeleccionados";
+            lblItemsSeleccionados.Size = new Size(111, 15);
+            lblItemsSeleccionados.TabIndex = 16;
+            lblItemsSeleccionados.Text = "ItemsSeleccionados";
             // 
             // btnEliminar
             // 
+            btnEliminar.BackColor = Color.Crimson;
             btnEliminar.Location = new Point(245, 127);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(125, 50);
             btnEliminar.TabIndex = 15;
             btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnBorrarTodo
             // 
@@ -74,6 +77,7 @@
             btnBorrarTodo.TabIndex = 14;
             btnBorrarTodo.Text = "Borrar Todo";
             btnBorrarTodo.UseVisualStyleBackColor = true;
+            btnBorrarTodo.Click += btnBorrarTodo_Click;
             // 
             // btnInsertar
             // 
@@ -83,6 +87,7 @@
             btnInsertar.TabIndex = 13;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
+            btnInsertar.Click += btnInsertar_Click;
             // 
             // txtNuevoElemento
             // 
@@ -117,13 +122,24 @@
             lstElementos.Size = new Size(194, 334);
             lstElementos.TabIndex = 9;
             // 
+            // btnSeleccionados
+            // 
+            btnSeleccionados.Location = new Point(245, 239);
+            btnSeleccionados.Name = "btnSeleccionados";
+            btnSeleccionados.Size = new Size(125, 50);
+            btnSeleccionados.TabIndex = 17;
+            btnSeleccionados.Text = "Seleccionados";
+            btnSeleccionados.UseVisualStyleBackColor = true;
+            btnSeleccionados.Click += btnSeleccionados_Click;
+            // 
             // Form12ColeccionMultiple
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(388, 450);
-            Controls.Add(label4);
-            Controls.Add(lblItemSeleccionado);
+            Controls.Add(btnSeleccionados);
+            Controls.Add(lblIndexSeleccionados);
+            Controls.Add(lblItemsSeleccionados);
             Controls.Add(btnEliminar);
             Controls.Add(btnBorrarTodo);
             Controls.Add(btnInsertar);
@@ -139,8 +155,8 @@
 
         #endregion
 
-        private Label label4;
-        private Label lblItemSeleccionado;
+        private Label lblIndexSeleccionados;
+        private Label lblItemsSeleccionados;
         private Button btnEliminar;
         private Button btnBorrarTodo;
         private Button btnInsertar;
@@ -148,5 +164,6 @@
         private Label label2;
         private Label label1;
         private ListBox lstElementos;
+        private Button btnSeleccionados;
     }
 }

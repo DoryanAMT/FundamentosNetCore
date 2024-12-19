@@ -12,7 +12,7 @@ namespace FundamentosNetCore
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //cambiar desde donde se inicia el programa
-            Application.Run(new Form11ColeccionGrafica());
+            Application.Run(new Form20TestClases());
         }
     }
 }
