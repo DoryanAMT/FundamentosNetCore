@@ -25,8 +25,8 @@ namespace FundamentosNetCore
             persona.Apellidos = "Navidad";
             persona.Edad = 25;
             persona.Genero = TipoGenero.Femenino;
-            this.lstClases.Items.Add("Indizada "+ persona[0]);
-            this.lstClases.Items.Add("Indizada "+ persona[33]);
+            this.lstClases.Items.Add("Indizada " + persona[0]);
+            this.lstClases.Items.Add("Indizada " + persona[33]);
             persona.Nacionalidad = Paises.Andorra;
 
             persona.Domicilio = new Direccion();
@@ -41,10 +41,35 @@ namespace FundamentosNetCore
 
             this.lstClases.Items.Add(persona.GetNombreCompleto());
             this.lstClases.Items.Add(
-                "Nombre: " + persona.Nombre + 
+                "Nombre: " + persona.Nombre +
                 ", Apellidos: " + persona.Apellidos
             );
-            this.lstClases.Items.Add("Edad: "+persona.Edad);
+            this.lstClases.Items.Add("Edad: " + persona.Edad);
+
+        }
+
+        private void btnCrearEmpleado_Click(object sender, EventArgs e)
+        {
+            //Empleado empleado = new Empleado("Empleado", "Empleado");
+            Empleado empleado = new Empleado();
+            empleado.Nombre = "Empleado";
+            empleado.Apellidos = "Empleado";
+
+            this.lstClases.Items.Add(empleado.GetNombreCompleto());
+            this.lstClases.Items.Add("El salario es: " + empleado.GetSalarioMinimo());
+            this.lstClases.Items.Add("Vacaciones Empleado: " + empleado.GetDiasVacaciones());
+        }
+
+        private void btnDirector_Click(object sender, EventArgs e)
+        {
+            Director director = new Director();
+            director.Nombre = "Director";
+            director.Apellidos = "Director";
+
+            this.lstClases.Items.Add(director.GetNombreCompleto());
+            this.lstClases.Items.Add("Salario Dire: " +
+                director.GetSalarioMinimo());
+            this.lstClases.Items.Add("Vaciones Director: " + director.GetDiasVacaciones());
 
         }
     }
